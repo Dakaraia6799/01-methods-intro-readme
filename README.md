@@ -10,9 +10,6 @@ In this lesson, we'll introduce methods, distinguish them from data types, and c
 2. Define a method with the `def` keyword, supply the method's body, and close the method definition with the `end` keyword.
 3. Invoke a method by calling it by name.
 
-### Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/njJB-fuE-qE?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/watch?v=njJB-fuE-qE">Introduction to Ruby Methods</a></p>
-
 ### Why Use Methods
 
 Methods define a new thing that your program can do. Variables are a mechanism to teach your Ruby program about data; methods teach your Ruby program about a new routine or behavior it can use. Variables are like nouns, methods are like verbs.
@@ -35,7 +32,7 @@ puts phrase
 
 That works pretty well. You made use of a variable to encapsulate the data you wanted to print and then the next ten lines literally print the phrase.
 
-Now imagine later in your program you again want to say "Hello World!" ten times. The entire program would look something like this:
+Now imagine later in your program you again want to say "Hello World!" ten more times. The entire program would look something like this:
 
 ```ruby
 phrase = "Hello World!"
@@ -64,7 +61,7 @@ puts phrase
 puts phrase
 ```
 
-We have to repeat the literal procedure for printing the value of `phrase` ten times. If variables encapsulate and abstract data, methods encapsulate and abstract procedure. Instead of literally `puts phrase` ten times, we can instead build a method—a little machine that does exactly that whenever we want.
+We have to repeat the literal procedure for printing the value of `phrase` ten times. If variables encapsulate and abstract data, methods encapsulate and abstract procedure. Instead of literally `puts phrase` ten times, we can instead build a method — a little machine that does exactly that whenever we want.
 
 The method would look like this:
 
@@ -123,7 +120,7 @@ That first line, `def greeting`, is called the method signature, it defines the 
 
 Once you open a method definition with the `def` keyword, all subsequent lines in your program are considered the method's body, the actual procedure or code that your method will run every time it's called.
 
-You must terminate every opening `def` of a method with a corresponding `end` in order to close the method body. If you don't correctly `end` a method, your program will have unexpected results or break entirely because of a syntax error. A good practice is to define the method and then immediately close it before programming anything into the method.
+You must terminate every opening `def` of a method with a corresponding `end` in order to close the method body (this is called the method closing). If you don't correctly `end` a method, your program will have unexpected results or break entirely because of a syntax error. **A good practice is to define the method and then immediately close it before programming anything into the method.**
 
 ```ruby
 def greeting
@@ -140,6 +137,10 @@ def greeting
   puts "Hello World" # Now code the body of the method.
 end
 ```
+To summarize, here is the fastest/best way to define a new method:
+* type `def method_name` and press enter
+* type `end`
+* go back up to the `def method_name`, put your cursor at the end of the line, and press **enter**.  Assuming you're in a file that ends in `.rb`, the body will already be indented, saving you time!
 
 ### Invoking a Method
 
@@ -157,7 +158,8 @@ greeting # Executing the method again
 #> "Hello World"
 ```
 
-Try it out. Make a new file called `greeting.rb` (you can use: `touch greeting.rb` from your terminal). Put the following code in it:
+### Try it out. 
+Inside your `01-variables-methods` folder, make a new file called `greeting.rb` (you can use: `touch greeting.rb` from your terminal). Put the following code in it:
 
 File: `greeting.rb`
 
@@ -226,5 +228,3 @@ The bareword `greeting` will execute the body of the defined method.
 
 ###### Writing code vs reading about code:
 > Note: Programmers love conventions, or agreed upon rules that help them talk to each other about code. A common syntax convention for Ruby methods is to preface them with a `#`, and in subsequent lessons, you might see methods written with a `#` in front of the method name. For example, if a method is named 'greeting', rubyists will often refer to it as `#greeting`. This is so that other rubyists can instantly recognize it as a method, as opposed to a variable or a bareword or a class.  But remember that when you write it in your code, it should be `greeting` and not `#greeting`. 
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-methods-readme' title='Methods in Ruby'>Methods in Ruby</a> on Learn.co and start learning to code for free.</p>
