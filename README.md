@@ -1,6 +1,6 @@
 # Methods in Ruby
 
-##Overview
+## Overview
 
 In this lesson, we'll introduce methods, distinguish them from data types, and cover how to create and execute them in your Ruby program.
 
